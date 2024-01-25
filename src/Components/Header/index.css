@@ -1,0 +1,247 @@
+/* Estilos do header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    background-color: rgb(47 73 90);
+    transition: margin-left 0.3s ease;
+    /* Adiciona uma transição suave ao movimento do conteúdo principal */
+    display: flex;
+    flex-wrap: wrap; /* Adiciona flex-wrap para que os itens possam se ajustar em telas menores */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-content.active {
+    margin-left: 250px; /* Igual à largura da sidebar */
+}
+
+/* Estilos da sidebar esquerdo */
+.sidebar {
+    width: 250px; /* A largura da sidebar */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Esconde a sidebar à esquerda */
+    background-color: rgb(34, 57, 72); /* Cor de fundo da sidebar */
+    padding-top: 6px; /* Deixe espaço para o cabeçalho (ajuste conforme necessário) */
+    transition: left 0.3s ease; /* Adiciona uma transição ao movimento da sidebar */
+
+}
+
+.sidebar-x {
+    margin-left: 200px;
+    background-color: transparent;
+    box-shadow: none; /* Remove sombra */
+    border: 1px solid transparent; /* Remove a borda */
+}
+
+.sidebar-x img {
+    width: 26px;
+    margin-left: auto;
+    background-color: transparent;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-content {
+    padding: 20px;
+    color: #fff;
+}
+
+.sidebar-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.sidebar-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-content ul li {
+    margin-bottom: 8px;
+    cursor: pointer; /* Cursor de ponteiro para indicar que são links clicáveis */
+}
+
+/* Estilos do botão de menu sandwish */
+.sandwich {
+    box-shadow: none; /* Remove sombra */
+    border: 0px solid transparent; /* Remove a borda */
+    background-color: transparent;
+
+}
+
+.sandwich img {
+    width: 36px;
+    margin-top: 4px;
+    background-color: transparent;
+}
+
+.logo-container img {
+    background-color: transparent;
+    width: 210px;
+}
+
+/* linear-gradient (to bottom, rgb(26, 26, 174) 10%, rgb(90, 90, 181) 30%); */
+/* Estilos da área de pesquisa  */
+.search-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(35% - 56px);
+}
+
+.search-div input {
+    padding: 14px;
+    border-radius: 28px;
+    border: none;
+    width: 100%;
+    /* width: calc(100% - 56px); */
+    /* padding-right: calc(20vw - 90px); */
+}
+
+.search-div .search-button {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-div .search-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilos da área de usuário */
+.user-actions {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    height: 40px;
+}
+
+.user-actions a {
+    color: #fff;
+}
+
+.email-input, .password-input  {
+    padding: 9px;
+    border-radius: 10px;
+    border: none;
+}
+
+.email-input {
+    width: 190px;
+}
+
+.password-input {
+    margin-left: 6px;
+    width: 70px;
+}
+
+.login-button {
+    padding: 9px 12px;
+    border-radius: 10px;
+    margin-left: 6px;
+    /* border: none; */
+    transition: background-color 0.3s, transform 0.3s;
+    border: 1px solid #eee;
+    background-color: #eee;
+    color: #333;
+
+}
+
+.cadastro {
+    margin-top: auto;
+    font-size: 12px;
+}
+
+
+/* Estilos do botão do carrinho */
+.div-carrinho .carrinho {
+    /* margin-right: 10px; */
+    margin-left: 10px;
+    box-shadow: none;
+        /* Remove sombra */
+        border: 0px;
+        /* Remove a borda */
+        background-color: transparent;
+        margin-right: 10px;
+        /* Adicionar margem à direita para separação */
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+}
+.div-carrinho img {
+    width: 40px;
+    margin-right: 5px;
+}
+
+
+/* Estilos da sidebar direita do carrinho de compras */
+.cart-sidebar {
+    width: 290px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Posiciona a barra lateral à direita (fora da tela) */
+    background-color: rgb(34, 57, 72); /* Cor de fundo da barra lateral */
+    padding-top: 6px; /* Deixe espaço para o cabeçalho (ajuste conforme necessário) */
+    transition: right 0.3s ease; /* Adiciona uma transição ao movimento da barra lateral */
+    text-align: center;
+}
+
+.cart-sidebar-x {
+    background-color: transparent;
+    box-shadow: none; /* Remove sombra */
+    border: 1px solid transparent; /* Remove a borda */
+    float: right;
+}
+
+.cart-sidebar-x img {
+    width: 26px;
+    margin-left: auto;
+    background-color: transparent;
+}
+
+.cart-sidebar.active {
+    right: 0; /* Move a barra lateral para a posição visível à direita */
+}
+
+.cart-sidebar p{
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-weight: bold;
+    
+
+}
+
+.finalizar-compra-button {
+    padding: 10px 80px;
+    border-radius: 20px;
+    border: none;
+    background-color: #16a8cd;
+    font-size: 14px;
+    font-weight: bolder;
+    color: rgb(34, 57, 72);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+}

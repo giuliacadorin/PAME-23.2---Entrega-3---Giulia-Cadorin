@@ -1,0 +1,83 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/* Estilos adicionais para o texto de aviso */
+.main p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+/* Estilo para o contêiner principal */
+.container {
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container .sem-produtos {
+    margin-bottom: 300px;
+}
+
+/* Estilo para o contêiner que envolve cada produto */
+.item-container {
+    flex-basis: calc(30% - 30px);
+    /* Ajusta a largura e margens conforme necessário */
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* Estilo para a imagem dentro de cada produto */
+.item-container .item-img  {
+    width: 100%;
+    margin-bottom: 10px;
+    justify-items: center;
+    text-align: center;    
+}
+
+.item-container .item-img img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.item-container p {
+    text-align: left;
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 16px;
+}
+
+/*
+.item-container .item-nome {}
+.item-container .item-descricao {}
+.item-container .item-categoria {}
+.item-container .item-tamanho {}
+.item-container .item-material {} 
+.item-container .item-preco {}
+*/
+
+
+/* @media define marcações de tamannhos de telas para ajustes específicos
+/* Adaptação para telas menores */
+@media (max-width: 768px) {  
+    .item-container {
+        flex-basis: calc(50% - 30px);
+        /* Ajusta a largura para duas colunas em telas menores */
+    }
+}
+
+/* Adaptação para telas ainda menores */
+@media (max-width: 480px) { 
+    .item-container {
+        flex-basis: calc(100% - 30px);
+        /* Ajusta a largura para ocupar 100% em telas pequenas */
+    }
+}
